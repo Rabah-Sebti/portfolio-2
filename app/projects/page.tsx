@@ -1,6 +1,5 @@
 import Navbar from "@/components/navbar";
 import { all_products } from "@/constants/products";
-import FeaturedProjects from "@/sections/home/featured-projects";
 import ProjectsList from "@/sections/projects/projects-list";
 
 export default async function ProjectDetailsPage() {

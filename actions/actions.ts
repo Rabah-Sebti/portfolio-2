@@ -25,10 +25,10 @@ export const sendMessageContact = async (formData: FormData) => {
           JSON.stringify(validatedFields.error.flatten().fieldErrors)
       );
     }
-    console.log("Validated form data:", validatedFields.data);
+    // console.log("Validated form data:", validatedFields.data);
     const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
     const apiUrl = `${baseUrl}/api/contact`;
-    console.log("API URL being fetched:", apiUrl);
+    // console.log("API URL being fetched:", apiUrl);
 
     const res = await fetch(apiUrl, {
       method: "POST",
@@ -40,11 +40,11 @@ export const sendMessageContact = async (formData: FormData) => {
       body: JSON.stringify(validatedFields.data),
     });
     if (!res.ok) {
-      console.log("Response not ok:", res.status, res.statusText);
+      // console.log("Response not ok:", res.status, res.statusText);
       throw new Error("error in post message contact");
     }
-    const result = await res.json();
-    console.log("Success response:", result);
+    // const result = await res.json();
+    // console.log("Success response:", result);
   } catch (error) {
     console.log("error send message contact", error);
   }

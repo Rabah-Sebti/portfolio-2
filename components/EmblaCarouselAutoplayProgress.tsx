@@ -36,6 +36,7 @@ export const useAutoplayProgress = (
     });
 
     setShowAutoplayProgress(true);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {
@@ -45,6 +46,7 @@ export const useAutoplayProgress = (
     emblaApi
       .on("autoplay:timerset", () => startProgress(autoplay.timeUntilNext()))
       .on("autoplay:timerstopped", () => setShowAutoplayProgress(false));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [emblaApi]);
 
   useEffect(() => {

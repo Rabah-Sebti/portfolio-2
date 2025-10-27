@@ -1,12 +1,5 @@
 import { all_products } from "@/constants/products";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
-import Image from "next/image";
+
 import ProjectImages from "@/components/project-images";
 import Navbar from "@/components/navbar";
 

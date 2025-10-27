@@ -3,13 +3,7 @@ import React, { useState } from "react";
 import { EmblaOptionsType } from "embla-carousel";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "./ui/carousel";
+
 import EmblaCarousel from "./embla-carousel";
 
 interface ProjectImagesProps {

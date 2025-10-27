@@ -24,8 +24,6 @@ function AboutCard({
 
   const springX = useSpring(mouseX, { stiffness: 400, damping: 25 });
   const springY = useSpring(mouseY, { stiffness: 400, damping: 25 });
-  console.log("springX", springX.get());
-  console.log("springY", springY);
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
     if (!cardRef.current) return;
