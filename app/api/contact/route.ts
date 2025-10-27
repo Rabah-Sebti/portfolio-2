@@ -10,15 +10,15 @@ export async function POST(request: Request) {
     port: 587, // or use 465 for secure connection
     secure: false, // true for 465, false for other ports
     auth: {
-      user: process.env.NEXT_PUBLIC_EMAIL_USER,
-      pass: process.env.NEXT_PUBLIC_EMAIL_PASS,
+      user: process.env.EMAIL_USER,
+      pass: process.env.EMAIL_PASS,
     },
   });
 
   try {
     await transporter.sendMail({
       from: `"${name}" <${email}>`, // Sender address
-      to: process.env.NEXT_PUBLIC_EMAIL_USER, // Recipient's email
+      to: process.env.EMAIL_USER, // Recipient's email
       subject: `New Contact Form Portfolio From ${name} - ${subject}`, // Subject line
       text: message, // Plain text body
     });

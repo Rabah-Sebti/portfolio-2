@@ -24,7 +24,7 @@ function ContactSection() {
                 name="name"
                 placeholder="Your Name"
                 className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
-                // required
+                required
               />
             </div>
             <div>
@@ -33,7 +33,7 @@ function ContactSection() {
                 name="email"
                 placeholder="Your Email"
                 className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
-                // required
+                required
               />
             </div>
             <div>
@@ -42,7 +42,7 @@ function ContactSection() {
                 name="subject"
                 placeholder="Subject"
                 className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
-                // required
+                required
               />
             </div>
             <div>
@@ -51,7 +51,7 @@ function ContactSection() {
                 name="message"
                 placeholder="Your Message"
                 className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white resize-none"
-                // required
+                required
               ></textarea>
             </div>
             <SubmitButton />

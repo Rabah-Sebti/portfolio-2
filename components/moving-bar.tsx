@@ -15,11 +15,7 @@ const techStack = [
     src: "/images/logos/next.png",
     className: "h-18 w-36 invert",
   },
-  // {
-  //   title: "AWS",
-  //   src: "/images/logos/aws.webp",
-  //   className: "h-18 w-36",
-  // },
+
   {
     title: "Figma",
     src: "/images/logos/figma.png",
@@ -57,7 +53,6 @@ export default function MovingBar() {
   const x = useMotionValue(0);
   const containerRef = useRef<HTMLDivElement>(null);
 
-  // continuously translate using useAnimationFrame
   useAnimationFrame((t, delta) => {
     const moveBy = (baseVelocity * delta) / 1000; // delta is ms → convert to seconds
     const newX = x.get() + moveBy;
@@ -66,7 +61,6 @@ export default function MovingBar() {
     if (!container) return;
 
     const width = container.scrollWidth / 2; // half because we duplicated
-    // Wrap around seamlessly when one set fully scrolls away
     if (newX <= -width) {
       x.set(0);
     } else {
@@ -78,7 +72,6 @@ export default function MovingBar() {
 
   return (
     <div className="relative overflow-hidden  py-6 my-6">
-      {/* fade edges */}
       <div className="pointer-events-none absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-slate-800 to-transparent z-10" />
       <div className="pointer-events-none absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-slate-800 to-transparent z-10" />
 

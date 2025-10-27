@@ -1,4 +1,3 @@
-"use client";
 import React from "react";
 // import { motion } from "framer-motion";
 
@@ -79,7 +78,7 @@ function HeroSection() {
         /> */}
       </div>
 
-      <div className="text-center  max-w-4xl mx-auto px-4 z-50">
+      <div className="text-center  max-w-4xl mx-auto px-4 z-20">
         <h1 className="text-6xl md:text-7xl font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-blue-800 bg-clip-text text-transparent mb-6">
           Hi, I’m Rabah — Full-Stack Web Developer
         </h1>

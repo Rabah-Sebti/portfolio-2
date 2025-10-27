@@ -12,20 +12,38 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
-import { usePathname, useRouter } from "next/navigation";
+import { useRouter } from "next/navigation";
 import Image from "next/image";
+
+const navLinks = [
+  { href: "#home", label: "Home" },
+  { href: "#projects", label: "Projects" },
+  { href: "#about", label: "About" },
+  { href: "#contact", label: "Contact" },
+];
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const pathname = usePathname();
+  // const pathname = usePathname();
   const router = useRouter();
-  const navLinks = [
-    { href: "#home", label: "Home" },
-    { href: "#projects", label: "Projects" },
-    { href: "#about", label: "About" },
-    { href: "#contact", label: "Contact" },
-  ];
+
+  const handleLinkClick = () => {
+    setIsOpen(false);
+  };
+
+  const handleNavClick = (hash: string) => {
+    // if (pathname.startsWith("/projects") || pathname.startsWith("/resume")) {
+    router.push(`/${hash}`);
+    // } else {
+    //   router.push(`/${hash}`);
+    //   // You are already on the home page, just scroll
+    //   const el = document.querySelector(hash);
+    //   if (el) {
+    //     el.scrollIntoView({ behavior: "smooth" });
+    //   }
+    // }
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -35,25 +53,6 @@ export default function Navbar() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
-  const handleLinkClick = () => {
-    setIsOpen(false);
-  };
-
-  const handleNavClick = (hash: string) => {
-    if (pathname.startsWith("/projects") || pathname.startsWith("/resume")) {
-      // You are on a project detail page, go to home + hash
-      router.push(`/${hash}`);
-    } else {
-      router.push(`/${hash}`);
-
-      // You are already on the home page, just scroll
-      const el = document.querySelector(hash);
-      if (el) {
-        el.scrollIntoView({ behavior: "smooth" });
-      }
-    }
-  };
 
   return (
     <motion.nav
@@ -68,28 +67,19 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-20 items-center">
-          <motion.div
-            className="flex items-center"
-            // whileHover={{ scale: 1.05 }}
-            // transition={{ type: "spring", stiffness: 400, damping: 10 }}
-          >
+          <div className="flex items-center">
             <button
-              // href="#home"
               onClick={() => handleNavClick("#home")}
-              // className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent cursor-pointer"
               className="w-12 h-12 rounded-full relative"
             >
               <Image
                 src="/images/profile.jpg"
                 alt="profile picture"
-                // width={50}
-                // height={50}
                 fill
                 className="rounded-full object-contain"
               />
-              {/* Portfolio */}
             </button>
-          </motion.div>
+          </div>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
@@ -102,7 +92,6 @@ export default function Navbar() {
               >
                 <button
                   onClick={() => handleNavClick(link.href)}
-                  // href={link.href}
                   className="relative text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 group"
                 >
                   {link.label}
@@ -113,8 +102,6 @@ export default function Navbar() {
           </div>
           <Link
             className="hidden md:block px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg shadow-lg transition-all duration-300 transform hover:shadow-[0_0_30px_rgba(59,130,246,0.8)]"
-            // whileHover={{ scale: 1.05 }}
-            // whileTap={{ scale: 0.95 }}
             href="/resume"
           >
             Resume
@@ -185,7 +172,6 @@ export default function Navbar() {
                       }}
                     >
                       <button
-                        // href={link.href}
                         onClick={() => {
                           handleLinkClick();
                           handleNavClick(link.href);
@@ -211,12 +197,8 @@ export default function Navbar() {
                   >
                     <button
                       className="px-8 py-4 w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg shadow-lg transition-all duration-300 transform hover:shadow-[0_0_30px_rgba(59,130,246,0.8)] cursor-pointer"
-                      // whileHover={{ scale: 1.05 }}
-                      // whileTap={{ scale: 0.95 }}
-                      // href="/resume"
                       onClick={() => {
                         handleLinkClick();
-                        // handleNavClick("/resume");
                         router.push("/resume");
                       }}
                     >

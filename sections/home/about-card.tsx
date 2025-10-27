@@ -4,6 +4,7 @@ import {
   useMotionValue,
   useSpring,
   motion,
+  Variants,
 } from "framer-motion";
 import React, { useRef, useState } from "react";
 
@@ -14,8 +15,7 @@ function AboutCard({
 }: {
   title: string;
   description: string;
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  variants: any;
+  variants: Variants;
 }) {
   const cardRef = useRef<HTMLDivElement>(null);
   const mouseX = useMotionValue(0);
@@ -43,7 +43,6 @@ function AboutCard({
       ref={cardRef}
       className="relative bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 transition-all duration-300 overflow-hidden group cursor-pointer border border-gray-300 dark:border-gray-600"
       variants={variants}
-      //   whileHover={{ y: -5 }}
       onMouseMove={handleMouseMove}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}

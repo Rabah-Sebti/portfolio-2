@@ -1,4 +1,3 @@
-// "use server";
 import { z } from "zod";
 
 const contactSchema = z.object({
@@ -27,7 +26,7 @@ export const sendMessageContact = async (formData: FormData) => {
       );
     }
     console.log("Validated form data:", validatedFields.data);
-    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
+    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
     const apiUrl = `${baseUrl}/api/contact`;
     console.log("API URL being fetched:", apiUrl);
 

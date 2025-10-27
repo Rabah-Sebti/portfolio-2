@@ -45,7 +45,6 @@ function ProjectCard({
       ref={cardRef}
       className="relative bg-white dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 p-6 transform overflow-hidden group cursor-pointer border border-gray-300 dark:border-gray-600"
       variants={variants}
-      //   whileHover={{ y: -10 }}
       onMouseMove={handleMouseMove}
     >
       <Link href={`/projects/${slug}`}>
