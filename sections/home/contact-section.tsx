@@ -8,7 +8,7 @@ function ContactSection() {
       id="contact"
       className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-50 to-gray-50 dark:from-slate-800 dark:to-slate-900 py-20"
     >
-      <div className="text-center max-w-4xl mx-auto px-4">
+      <div className="text-center w-full md:max-w-4xl mx-auto px-4">
         <h2 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-gray-900 to-gray-600 dark:from-white dark:to-gray-300 bg-clip-text text-transparent mb-6">
           Contact
         </h2>

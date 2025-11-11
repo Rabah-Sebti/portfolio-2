@@ -22,7 +22,7 @@ interface FeaturedProjectsProps {
 function ProjectsList({ data }: FeaturedProjectsProps) {
   return (
     <section className="min-h-screen flex items-center justify-center bg-slate-800  py-20">
-      <div className="text-center max-w-6xl mx-auto px-4">
+      <div className="text-center ">
         <h2 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-gray-900 to-gray-600 dark:from-white dark:to-gray-300 bg-clip-text text-transparent mb-6 py-6">
           All Projects
         </h2>

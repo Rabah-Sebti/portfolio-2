@@ -24,14 +24,14 @@ function ProjectImages({ thumbnail, images, title }: ProjectImagesProps) {
       <motion.div
         initial={{
           opacity: 0,
-          y: 30,
+          y: 20,
         }}
         animate={{
           opacity: 1,
           y: 0,
         }}
         transition={{
-          duration: 0.5,
+          duration: 0.3,
         }}
         key={activeImage}
         className="relative"
@@ -42,6 +42,8 @@ function ProjectImages({ thumbnail, images, title }: ProjectImagesProps) {
           height="1000"
           width="1000"
           className="rounded-md object-contain"
+          // placeholder="blur"
+          // blurDataURL=""
         />
         {/* <div className="absolute bottom-0 bg-white h-40 w-full [mask-image:linear-gradient(to_bottom,transparent,white)]" /> */}
       </motion.div>

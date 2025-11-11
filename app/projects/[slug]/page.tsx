@@ -24,7 +24,7 @@ export default async function ProjectDetailsPage({ params }: PageProps) {
   return (
     <main className="bg-slate-800 min-h-screen text-white  flex items-center justify-center">
       <Navbar />
-      <div className="container mx-auto px-4 py-8  z-10 max-w-4xl mt-14">
+      <div className="container mx-auto px-4 py-8  z-10 w-full md:max-w-4xl mt-14">
         {/* Carousel */}
         <div className="mb-8">
           {/* <Carousel className="w-full max-w-4xl mx-auto">
