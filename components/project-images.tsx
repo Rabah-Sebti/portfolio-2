@@ -41,9 +41,7 @@ function ProjectImages({ thumbnail, images, title }: ProjectImagesProps) {
           alt="thumbnail"
           height="1000"
           width="1000"
-          className="rounded-md object-contain"
-          // placeholder="blur"
-          // blurDataURL=""
+          className="rounded-md object-cover mdd:object-fill h-[200px] md:h-[350px] w-full"
         />
         {/* <div className="absolute bottom-0 bg-white h-40 w-full [mask-image:linear-gradient(to_bottom,transparent,white)]" /> */}
       </motion.div>
