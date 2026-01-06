@@ -47,7 +47,7 @@ function ProjectCard({
       variants={variants}
       onMouseMove={handleMouseMove}
     >
-      <Link href={`/projects/${slug}`}>
+      <Link href={`/projects/${slug}`} className="h-full flex flex-col flex-1 ">
         <motion.div
           className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
           style={{
@@ -65,7 +65,10 @@ function ProjectCard({
         <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2 relative z-10">
           {title}
         </h3>
-        <p className="text-gray-600 dark:text-gray-300 relative z-10">
+        <p
+          className="text-gray-600 dark:text-gray-300 relative z-10 mt-auto line-clamp-3"
+          title={description}
+        >
           {description}
         </p>
       </Link>

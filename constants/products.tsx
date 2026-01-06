@@ -14,45 +14,61 @@ export type Product = {
 export const featured_products: Product[] = [
   {
     href: null,
-    title: "MedDent",
-    description: "E-learning web site for medical courses.",
-    thumbnail: "/images/meddent-home.png",
+    title: "Flight Experience Sales Dashboard",
+    description:
+      "Administrative dashboard for managing the sale of flight simulation experiences, creating and configuring experiences, handling customer orders, managing bookings through a calendar system, and controlling discount coupons to optimize sales and availability.",
+    thumbnail: "/images/flight-orders.png",
     images: [
-      "/images/meddent-home.png",
-      "/images/meddent-home1.png",
-      "/images/meddent-home2.png",
-      "/images/meddent-courses.png",
-      "/images/meddent-courses1.png",
-      "/images/meddent-overview.png",
+      "/images/flight-orders.png",
+      "/images/flight-calendar.png",
+      "/images/flight-experiences.png",
+      "/images/flight-add-experiences.png",
+      "/images/flight-add-booking.png",
     ],
-    stack: [
-      "Nextjs",
-      "Tailwindcss",
-      "shadcnUI",
-      "Nodejs",
-      "Nestjs",
-      "Postgresql",
-    ],
-    slug: "meddent",
-    content: (
-      <div>
-        <p>
-          An e-learning platform offering comprehensive courses in medical
-          sciences, including medicine, pharmacy, and dentistry. Designed to
-          provide expert-led training and resources for aspiring and current
-          healthcare professionals to advance their careers in the medical
-          field.
-        </p>
-        <p>
-          The website also offers convenient online payment options for courses,
-          allowing students to easily enroll and access course materials,
-          including video lectures and other learning resources, from anywhere
-          at any time,the platform supports multiple languages, with content
-          available in both French and English to cater to a diverse audience.
-        </p>
-      </div>
-    ),
+    stack: ["Reactjs", "Vite", "Tailwindcss", "ShadcnUI"],
+    slug: "flight-experience-dashboard",
   },
+  // {
+  //   href: null,
+  //   title: "MedDent",
+  //   description: "E-learning web site for medical courses.",
+  //   thumbnail: "/images/meddent-home.png",
+  //   images: [
+  //     "/images/meddent-home.png",
+  //     "/images/meddent-home1.png",
+  //     "/images/meddent-home2.png",
+  //     "/images/meddent-courses.png",
+  //     "/images/meddent-courses1.png",
+  //     "/images/meddent-overview.png",
+  //   ],
+  //   stack: [
+  //     "Nextjs",
+  //     "Tailwindcss",
+  //     "shadcnUI",
+  //     "Nodejs",
+  //     "Nestjs",
+  //     "Postgresql",
+  //   ],
+  //   slug: "meddent",
+  //   content: (
+  //     <div>
+  //       <p>
+  //         An e-learning platform offering comprehensive courses in medical
+  //         sciences, including medicine, pharmacy, and dentistry. Designed to
+  //         provide expert-led training and resources for aspiring and current
+  //         healthcare professionals to advance their careers in the medical
+  //         field.
+  //       </p>
+  //       <p>
+  //         The website also offers convenient online payment options for courses,
+  //         allowing students to easily enroll and access course materials,
+  //         including video lectures and other learning resources, from anywhere
+  //         at any time,the platform supports multiple languages, with content
+  //         available in both French and English to cater to a diverse audience.
+  //       </p>
+  //     </div>
+  //   ),
+  // },
   // {
   //   href: "https://stormtechdz.com",
   //   title: "Storm Tech",
@@ -191,7 +207,22 @@ export const all_products: Product[] = [
     slug: "ordolib",
     // content: null,
   },
-
+  {
+    href: null,
+    title: "Flight Experience Sales Dashboard",
+    description:
+      "Administrative dashboard for managing the sale of flight simulation experiences, creating and configuring experiences, handling customer orders, managing bookings through a calendar system, and controlling discount coupons to optimize sales and availability.",
+    thumbnail: "/images/flight-orders.png",
+    images: [
+      "/images/flight-orders.png",
+      "/images/flight-calendar.png",
+      "/images/flight-experiences.png",
+      "/images/flight-add-experiences.png",
+      "/images/flight-add-booking.png",
+    ],
+    stack: ["Reactjs", "Vite", "Tailwindcss", "ShadcnUI"],
+    slug: "flight-experience-dashboard",
+  },
   {
     href: "https://convostream.netlify.app/",
     title: "Convo Stream",
@@ -266,5 +297,20 @@ export const all_products: Product[] = [
     stack: ["Nextjs", "Tailwindcss", "ShadcnUI"],
     slug: "saturnepro",
     // content: null,
+  },
+  {
+    href: null,
+    title: "HR Management Dashboard",
+    description:
+      "Human resources management system designed to manage employees, calculate payroll, generate and print salary slips in PDF format, handle employee contracts, and centralize all HR-related operations in one secure dashboard.",
+    thumbnail: "/images/hr-personals.png",
+    images: [
+      "/images/hr-overview.png",
+      "/images/hr-settings.png",
+      "/images/hr-add-leave-abs.png",
+      "/images/hr-personals.png",
+    ],
+    stack: ["Reactjs", "Vite", "Mui"],
+    slug: "hr-management",
   },
 ];
