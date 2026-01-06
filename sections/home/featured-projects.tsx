@@ -21,7 +21,7 @@ interface FeaturedProjectsProps {
   data: Product[];
 }
 
-function FeaturedProjects({ data }: FeaturedProjectsProps) {
+export function FeaturedProjects({ data }: FeaturedProjectsProps) {
   return (
     <section
       id="projects"
@@ -59,4 +59,4 @@ function FeaturedProjects({ data }: FeaturedProjectsProps) {
   );
 }
 
-export default FeaturedProjects;
+// export default FeaturedProjects;
